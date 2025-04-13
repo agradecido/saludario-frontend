@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { API_CONFIG } from '../config/api.config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FoodEntriesService {
-  private apiUrl = 'http://localhost:5000/api/food-entries';
+  private apiUrl = `${API_CONFIG.baseUrl}${API_CONFIG.endpoints.foodEntries}`;
 
   constructor(private http: HttpClient) {}
 
