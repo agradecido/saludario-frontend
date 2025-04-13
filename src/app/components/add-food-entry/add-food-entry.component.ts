@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core'; // Importa TranslateModule
 import { NgIf, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms'; // Importa FormsModule para ngModel
 
 @Component({
   standalone: true, // Indica que este componente es standalone
-  imports: [NgIf, NgFor, FormsModule], // Importa FormsModule y directivas necesarias
+  imports: [TranslateModule, FormsModule, NgIf, NgFor], // Asegúrate de incluir TranslateModule aquí
   selector: 'app-add-food-entry',
   templateUrl: './add-food-entry.component.html',
   styleUrls: ['./add-food-entry.component.scss']
